@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    {% extends "layout.html" %}
+    {% block content %}
+
+    <div class="home">
+        <h1>Audio Converter</h1>
+        <p>Choose which files you wish to convert and press confirm to get a download prompt.</p>
+
+    <form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
+        <div>
+            <label for="file-upload">
+                <input type="file" id="file-upload" name="file">
+                <i class="fa fa-upload custom-file-upload buttonHover" aria-hidden="true"> Choose File</i>
+            </label>
+            <p id="file-upload-type">
+                .mp3 .wav .flac .ogg .xm ...
+            </p>
+
+        </div>
+        <div id="infoDiv" class="preview">
+            <p id=>No file currently selected for upload</p>
+        </div>
+        <div>
+            <select name="format_select">
+                <option value="mp3">mp3</option>
+                <option value="flac">flac</option>
+                <option value="wav">wav</option>
+                <option value="ogg">ogg</option>
+            </select>
+            <input type="submit" value=Convert />
+        </div>
+    </form>
+    </div>
+    <script type="text/javascript" src="{{ url_for('static', filename='js.js') }}"></script>
+    {% endblock %}
+
+
+</body>
+
+</html>
