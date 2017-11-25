@@ -1,10 +1,8 @@
-# Project Title
-
-Flask-FFmpeg Media Converter
+# Flask-FFmpeg Media Converter
 
 ## About
 
-This is a WIP project that interfaces an audio converter powered by ffmpeg using flask, and my project for ICT 12 - October/November 2017
+This is a WIP project that interfaces an audio converter powered by ffmpeg using flask, and my self-driven project for ICT 12 - October/November 2017.
 
 This was my first dive into flask and standalone back-ends.
 I will be adding and improving to this in the future, but this is what I have so far.
