@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect, url_for, send_from_directory, current_app, make_response, send_file
+from flask import Flask, render_template, request, redirect, url_for, send_from_directory, current_app, make_response
 from werkzeug.utils import secure_filename
 import os
 import subprocess as sp
@@ -60,8 +60,6 @@ def upload():
 				return send_from_directory(directory=ddir, filename=dfile, as_attachment=True)
 
 		return render_template('home.html')
-			#f = 'files\\download\\'+ '{}.{}'.format(os.path.splitext(filename)[0], 'wav')
-			#return send_file(f, as_attachment=True)
 	else:
 		return redirect(url_for('home'))
 

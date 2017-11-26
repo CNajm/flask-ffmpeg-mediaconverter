@@ -1,3 +1,10 @@
-__pycache__ 
-*.exe 
-venv 
+__pycache__
+*.exe
+venv
+
+files/uploaded/*
+files/download/*
+
+# exception to the rule
+!files/uploaded/.gitkeep
+!files/download/.gitkeep
